@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+<div class="text-lg main-wrapper">
+    <div class="side-col float-left">
+        <div class="solid-bkg p-3 shadow">
+            <div class="border-bottom">Next</div>
+            <canvas id="previewCanvas" class="mt-1 solid-bkg"></canvas>
+        </div>
+    </div>
+    <div id="centerCol" class=" ml-3 p-relative float-left">
+        <div class="p-absolute shadow">
+            <canvas id="canvas" class="solid-bkg"></canvas>
+            <canvas id="pieceCanvas" class="p-absolute solid-bkg"></canvas>
+        </div>
+        <div id="menu" class="p-absolute p-3 text-center solid-bkg menu shadow">
+            <div class="text-lg">Tetris</div>
+            <div class="border-bottom">Controls</div>
+            <table id="instructions" class="mb-3">
+                <thead><tr><td></td><td></td></tr></thead>
+                <tbody>
+                <tr><td>left, right</td><td>&larr; &rarr;</td></tr>
+                <tr><td>down</td><td>&darr;</td></tr>
+                <tr><td>rotate</td><td>&uarr;</td></tr>
+                <tr><td>drop</td><td>space</td></tr>
+                </tbody>
+            </table>
+            <button id="startBtn">Play</button>
+        </div>
+
+        <div id="gameOver" class="d-none p-absolute p-3 text-center solid-bkg menu shadow">
+            <p class="text-lg">Game Over</p>
+            <button id="restartBtn">Retry</button>
+        </div>
+    </div>
+
+    <div id="sideColRight" class="side-col float-left ml-3">
+
+        <div class="solid-bkg mb-3 p-3 shadow">
+            <div class="border-bottom">Lines</div>
+            <div id="lines">0</div>
+        </div>
+
+        <div class="solid-bkg mb-3 p-3 shadow">
+            <div class="border-bottom">Score</div>
+            <div id="score">0</div>
+        </div>
+
+        <div class="solid-bkg mb-3 p-3 shadow">
+            <div class="border-bottom">High Score</div>
+            <div id="highScore">0</div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="dist/utils.js"></script>
+<script type="module" src="dist/display.js"></script>
+<script type="module" src="dist/game.js"></script>
+<script type="module" src="dist/main.js"></script>
+
+</body>
+</html>
